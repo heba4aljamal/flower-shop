@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+        }
+
+        .pic {
+            border-radius: 20px;
+            padding: 20px;
+            background-color: hsl(0, 0%, 100%);
+            width: 50%;
+            margin-right: 20px;
+        }
+
+        .pic h1 {
+            font-size: 40px;
+            font-weight: bold;
+            color: #ffb444;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .pic p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #f5e466;
+            margin-bottom: 20px;
+            font-weight: lighter;
+            text-align: justify;
+        }
+
+        .imgg {
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 200px; 
+        }
+
+        .form-container {
+            width: 40%;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) inset;
+            background-image: linear-gradient(to right, #ffb444, #e6f5a9);
+            background-size: 200% auto;
+            animation: gradientBorder 3s linear infinite;
+        }
+
+        @keyframes gradientBorder {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: transparent;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+            outline: none;
+        }
+
+        .form-button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #000;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-button:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="pic"> 
+            <h1>Sunflowers </h1>
+            <p>Sunflowers are annual plants that belong to the genus Helianthus. They are characterized by their large, yellow ray flowers which resemble the sun. Sunflowers have a tall, sturdy stem and typically grow in warm climates. They are known for their ability to track the sun throughout the day, a phenomenon called heliotropism. Sunflowers are cultivated for their seeds, which are a nutritious snack, and for their oil, which is used in cooking and cosmetics. Additionally, they are popular ornamental plants in gardens and landscapes.</p>
+            <img class="imgg" src="images/sun.jpg" width="200px"> 
+        </div>
+
+        <div class="form-container">
+            <div class="form-group">
+                <label for="card-number" class="form-label">Card Number:</label>
+                <input type="text" id="card-number" class="form-input" placeholder="Enter your card number">
+            </div>
+            <div class="form-group">
+                <label for="card-name" class="form-label">Name on Card:</label>
+                <input type="text" id="card-name" class="form-input" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="security-code" class="form-label">Security Code:</label>
+                <input type="text" id="security-code" class="form-input" placeholder="CVV">
+            </div>
+            <button class="form-button">Buy Now</button>
+        </div>
+    </div>
+</body>
+</html>
